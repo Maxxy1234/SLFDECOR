@@ -1,0 +1,4 @@
+- [x] Remove the Ziptrack category from the homepage Our Work section.
+- [x] Remove the Ziptrack category from the Our Work page filters.
+- [x] Reassign any Ziptrack work items so they appear under the Blind category instead.
+- [x] Re-test the category filters and save a new checkpoint.
