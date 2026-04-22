@@ -1771,7 +1771,6 @@ function LocationShowcase() {
           306 E, Jalan Burma, Pulau Tikus, 10350 George Town, Pulau Pinang
         </div>
       </div>
-      </div>
     </div>
   );
 }
