@@ -7,7 +7,6 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Link, useLocation } from "wouter";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { MapView } from "@/components/Map";
 import { cn } from "@/lib/utils";
 import {
   ArrowRight,
@@ -1706,7 +1705,6 @@ function PageHero({ eyebrow, title, body, image }: { eyebrow: string; title: str
 }
 
 function LocationShowcase() {
-  const [mapReady, setMapReady] = useState(false);
 
   return (
     <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -1760,30 +1758,19 @@ function LocationShowcase() {
           </Button>
         </div>
       </div>
-      <div className="overflow-hidden rounded-[1.8rem] border border-border/70 bg-card/85 p-3 shadow-[0_24px_70px_rgba(58,36,25,0.08)]">
-        <MapView
-          className="h-[520px] rounded-[1.45rem]"
-          initialCenter={{ lat: 5.4245, lng: 100.3174 }}
-          initialZoom={15}
-          onMapReady={(map) => {
-            const geocoder = new window.google.maps.Geocoder();
-            geocoder.geocode({ address: ADDRESS }, (results, status) => {
-              if (status === "OK" && results?.[0]) {
-                const position = results[0].geometry.location;
-                map.setCenter(position);
-                new window.google.maps.marker.AdvancedMarkerElement({
-                  map,
-                  position,
-                  title: BUSINESS_NAME,
-                });
-                setMapReady(true);
-              }
-            });
-          }}
+     <div className="overflow-hidden rounded-[1.8rem] border border-border/70 bg-card/85 p-3 shadow-[0_24px_70px_rgba(58,36,25,0.08)]">
+        <iframe
+          src="https://maps.google.com/maps?q=306+E+Jalan+Burma+Pulau+Tikus+10350+George+Town+Pulau+Pinang&output=embed"
+          className="h-[520px] w-full rounded-[1.45rem]"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         />
         <div className="mt-3 px-2 text-xs uppercase tracking-[0.24em] text-foreground/58">
-          {mapReady ? "Map positioned for the George Town location" : "Loading map for the exact location"}
+          306 E, Jalan Burma, Pulau Tikus, 10350 George Town, Pulau Pinang
         </div>
+      </div>
       </div>
     </div>
   );
