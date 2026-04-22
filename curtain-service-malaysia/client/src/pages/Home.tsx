@@ -1760,7 +1760,7 @@ function LocationShowcase() {
       </div>
      <div className="overflow-hidden rounded-[1.8rem] border border-border/70 bg-card/85 p-3 shadow-[0_24px_70px_rgba(58,36,25,0.08)]">
         <iframe
-          src="https://maps.google.com/maps?q=306+E+Jalan+Burma+Pulau+Tikus+10350+George+Town+Pulau+Pinang&output=embed"
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.123!2d100.3152!3d5.4245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac396b1b3e937%3A0x3b5958ae26b59f6c!2s306E%2C%20Jalan%20Burma%2C%20Pulau%20Tikus%2C%2010350%20George%20Town%2C%20Pulau%20Pinang!5e0!3m2!1sen!2smy!4v1234567890"
           className="h-[520px] w-full rounded-[1.45rem]"
           style={{ border: 0 }}
           allowFullScreen
